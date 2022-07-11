@@ -17,7 +17,7 @@
 * [Sources](installation/sources/README.md)
   * [Download Source Code](installation/sources/download-source-code.md)
   * [Build And Install](installation/sources/build-and-install.md)
-* [Docker](installation/docker.md)
+  * [Docker](installation/sources/docker.md)
 
 ## Concepts
 
@@ -38,13 +38,13 @@
 
 * [Overview](data-pipeline/overview.md)
 * [Input](data-pipeline/input/README.md)
-  * [Figma Integration](data-pipeline/input/figma-integration.md)
+  * [File Log](data-pipeline/input/file-log.md)
 * [Parse](data-pipeline/parse/README.md)
-  * [GitHub Integration](data-pipeline/parse/github-integration.md)
+  * [Split Log Regex](data-pipeline/parse/split-log-regex.md)
 * [Process](data-pipeline/process.md)
 * [Aggregate](data-pipeline/aggregate.md)
-* [Output](data-pipeline/output/README.md)
-  * [Intercom Integration](data-pipeline/output/intercom-integration.md)
+* [Flusher](data-pipeline/flusher/README.md)
+  * [Stdout](data-pipeline/flusher/stdout.md)
 * [Gists](data-pipeline/gists.md)
 
 ## Priciples

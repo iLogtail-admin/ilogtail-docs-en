@@ -1,71 +1,51 @@
 # What is iLogtail
 
-{% hint style="info" %}
-**Good to know:** providing a brief overview of your product and its core use cases is a great place to start with product docs. Your product might seem obvious to you – you made it! However, to others, even folks who are trying your product after reading your site or getting a sales demo, it can still be unclear. This is your chance to clarify your product and set the right expectations!
-{% endhint %}
+![](<.gitbook/assets/image (1).png>)
 
-Here are a couple of examples of succinct overviews from products with really great docs:
+iLogtail was born for observable scenarios and has many production-level features such as lightweight, high performance, and automated configuration, which are widely used internally by Alibaba Group and tens of thousands of external Alibaba Cloud customers. You can deploy it in physical machines, Kubernetes and other environments to collect telemetry data, such as logs, traces and metrics.
 
-> Loom is a video messaging tool that helps you get your message across through instantly shareable videos.
->
-> With Loom, you can record your camera, microphone, and desktop simultaneously. Your video is then instantly available to share through Loom's patented technology.
->
-> — From the [Loom Docs](https://support.loom.com/hc/en-us/articles/360002158057-What-is-Loom-)
+[![GitHub stars](https://camo.githubusercontent.com/674a26318ece2d770231086a733bebdbb174c15721f03714f5b79930574a800a/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f616c69626162612f696c6f677461696c)](https://github.com/alibaba/ilogtail/stargazers) [![GitHub issues](https://camo.githubusercontent.com/4266ec67b48f666bc0d440f9d1399e4b56ffc4eca3af3764e062731be83b2873/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f616c69626162612f696c6f677461696c)](https://github.com/alibaba/ilogtail/issues) [![GitHub license](https://camo.githubusercontent.com/608afe55a7ca2ed062304f89208d3b929fddcbde8923cd09ef40edb2d2c3bf76/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f616c69626162612f696c6f677461696c)](https://github.com/alibaba/ilogtail/blob/main/LICENSE)
 
-> The Mailchimp Marketing API provides programmatic access to Mailchimp data and functionality, allowing developers to build custom features to do things like sync email activity and campaign analytics with their database, manage audiences and campaigns, and more.
->
-> — From the [Mailchimp Marketing API docs](https://mailchimp.com/developer/marketing/docs/fundamentals/)
+## Advantages
 
-## Getting Started
+The core advantages of **iLogtail** :
 
-**Got 2 minutes?** Check out a video overview of our product:
+* Support a variety of Logs, Traces, Metrics data collection, and friendly to container and Kubernetes environment support.
+* The resource cost of data collection is quite low, 5-20 times better than similar telemetry data collection Agent performance.
+* High stability, used in the production of Alibaba and tens of thousands of Alibaba Cloud customers, and collecting dozens of petabytes of observable data every day with nearly tens of millions deployments.
+* Support plugin expansion, such as collection, processing, aggregation, and sending modules.
+* Support configuration remote management and provide a variety of ways, such as SLS console, SDK, K8s Operator, etc.
+* Supports multiple advanced features such as self-monitoring, flow control, resource control, alarms, and statistics collection.
 
-{% embed url="https://www.loom.com/share/3bfa83acc9fd41b7b98b803ba9197d90" %}
+## Features
 
-{% hint style="info" %}
-**Good to know:** A succinct video overview is a great way to introduce folks to your product. Embed a Loom, Vimeo or YouTube video and you're good to go! We love this video from the fine folks at [Loom](https://loom.com) as a perfect example of a succinct feature overview.
-{% endhint %}
+**iLogtail** supports the collection of a variety of telemetry data and transmission to a variety of different backends, such as [SLS observable platform](https://www.aliyun.com/product/sls). The data supported for collection are mainly as follows:
 
-### Guides: Jump right in
+* Logs
+  * Collect static log files
+  * Dynamic collect the files when running with containerized environment
+  * Dynamic collect Stdout when running with containerized environment
+* Traces
+  * OpenTelemetry protocol
+  * Skywalking V2 protocol
+  * Skywalking V3 protocol
+  * ...
+* Metrics
+  * Node metrics
+  * Process metrics
+  * Gpu metrics
+  * Nginx metrics
+  * Support fetch prometheus metrics
+  * Support transfer telegraf metrics
+  * ...
 
-Follow our handy guides to get started on the basics as quickly as possible:
+## Contact Us
 
-{% content-ref url="installation/quick-start.md" %}
-[quick-start.md](installation/quick-start.md)
-{% endcontent-ref %}
+You can report bugs, make suggestions or participate in discussions through [Github Issues](https://github.com/alibaba/ilogtail/issues), or contact us with the following ways:
 
-{% content-ref url="installation/start-with-container.md" %}
-[start-with-container.md](installation/start-with-container.md)
-{% endcontent-ref %}
+* DingTalk：iLogtail社区
+* WeChat：日志服务
+* Bilibili：[阿里云SLS](https://space.bilibili.com/630680534?from=search\&seid=2845737427240690794\&spm\_id\_from=333.337.0.0)
+* Zhihu：[阿里云日志服务](https://www.zhihu.com/people/a-li-yun-ri-zhi-fu-wu)
 
-{% content-ref url="installation/supervised.md" %}
-[supervised.md](installation/supervised.md)
-{% endcontent-ref %}
-
-{% hint style="info" %}
-**Good to know:** your product docs aren't just a reference of all your features! use them to encourage folks to perform certain actions and discover the value in your product.
-{% endhint %}
-
-### Fundamentals: Dive a little deeper
-
-Learn the fundamentals of MyProduct to get a deeper understanding of our main features:
-
-{% content-ref url="concepts/key-concepts.md" %}
-[key-concepts.md](concepts/key-concepts.md)
-{% endcontent-ref %}
-
-{% content-ref url="concepts/data-pipeline/" %}
-[data-pipeline](concepts/data-pipeline/)
-{% endcontent-ref %}
-
-{% content-ref url="concepts/data-pipeline/input.md" %}
-[input.md](concepts/data-pipeline/input.md)
-{% endcontent-ref %}
-
-{% content-ref url="concepts/data-pipeline/output.md" %}
-[output.md](concepts/data-pipeline/output.md)
-{% endcontent-ref %}
-
-{% hint style="info" %}
-**Good to know:** Splitting your product into fundamental concepts, objects, or areas can be a great way to let readers deep dive into the concepts that matter most to them. Combine guides with this approach to 'fundamentals' and you're well on your way to great documentation!
-{% endhint %}
+![](.gitbook/assets/image.png)
